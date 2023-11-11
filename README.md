@@ -14,3 +14,4 @@ This project is part of [Being Digital](https://github.com/MichelaFaella/BeingDi
 
 * [Unity](https://unity.com/) - The game engine used for the development.
 * [C#](https://learn.microsoft.com/it-it/dotnet/csharp/) - The programming language used for the development.
+* [Pixel Art Top Down - Basic](https://assetstore.unity.com/packages/2d/environments/pixel-art-top-down-basic-187605) - The package used for the environment.
