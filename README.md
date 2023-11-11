@@ -3,7 +3,7 @@
 Unity Project for privacy literacy internship project for 
 Bachelor Degree in computer science at University of Salerno.
 
-This project is part of Being Digital.
+This project is part of [Being Digital](https://github.com/MichelaFaella/BeingDigital).
 
 ## Authors
 
@@ -14,11 +14,3 @@ This project is part of Being Digital.
 
 * [Unity](https://unity.com/) - The game engine used for the development.
 * [C#](https://learn.microsoft.com/it-it/dotnet/csharp/) - The programming language used for the development.
-
-# Contributors
-
-<a href="https://github.com/losor2002/PasswordQuest/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=losor2002/PasswordQuest" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
