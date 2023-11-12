@@ -1,7 +1,14 @@
 # Password Quest
 
-Unity Project for privacy literacy internship project for 
-Bachelor Degree in computer science at University of Salerno.
+<p align = "center">
+  Unity Project for privacy literacy
+  <br>
+  internship project for
+  <br>
+  Bachelor Degree in computer science 
+  <br>
+  at University of Salerno.
+</p>
 
 This project is part of [Being Digital](https://github.com/MichelaFaella/BeingDigital).
 
