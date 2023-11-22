@@ -8,6 +8,8 @@ namespace Cainos.PixelArtTopDown_Basic
     public class TopDownCharacterController : MonoBehaviour
     {
         public float speed;
+        public int verticalPlayerMovement;
+        public int horizontalPlayerMovement;
 
         private Animator animator;
         private Rigidbody2D _rigidbody2D;
@@ -23,23 +25,23 @@ namespace Cainos.PixelArtTopDown_Basic
         private void Update()
         {
             Vector2 dir = Vector2.zero;
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || horizontalPlayerMovement == -1)
             {
                 dir.x = -1;
                 animator.SetInteger("Direction", 3);
             }
-            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || horizontalPlayerMovement == 1)
             {
                 dir.x = 1;
                 animator.SetInteger("Direction", 2);
             }
 
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || verticalPlayerMovement == 1)
             {
                 dir.y = 1;
                 animator.SetInteger("Direction", 1);
             }
-            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || verticalPlayerMovement == -1)
             {
                 dir.y = -1;
                 animator.SetInteger("Direction", 0);
