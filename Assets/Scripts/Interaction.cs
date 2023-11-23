@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
+    public static bool TouchSpacePressed;
+    
     public string requiredObjectTag;
     public GameObject spaceBarText;
     
@@ -20,8 +22,9 @@ public class Interaction : MonoBehaviour
 
     private void Update()
     {
-        if (_interactable && Input.GetKeyDown(KeyCode.Space))
+        if (_interactable && (Input.GetKeyDown(KeyCode.Space) || TouchSpacePressed))
         {
+            TouchSpacePressed = false;
             _inventory.AddObject(tag);
             _gameController.ObjectPicked(tag);
             Destroy(gameObject);
