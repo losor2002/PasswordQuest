@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     public TMP_Text passwordText;
     public GameObject gameOverText;
     public GameObject winText;
+    public GameObject welcomeText;
     public string[] objWithPasswordTags;
     public string[] objWithPasswordTexts;
 
@@ -25,6 +26,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         _lives = FindObjectOfType<Lives>();
+        Time.timeScale = 0.0f;
     }
 
     public void ObjectPicked(string objTag)
@@ -69,5 +71,11 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("Cainos/Pixel Art Top Down - Basic/Scene/SC Pixel Art Top Down - Basic");
+    }
+
+    public void StartGame()
+    {
+        welcomeText.SetActive(false);
+        Time.timeScale = 1.0f;
     }
 }
