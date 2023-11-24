@@ -12,9 +12,9 @@ public class ExitFullscreenToShowKeyboard : MonoBehaviour, IPointerDownHandler, 
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (Input.touchSupported)
-        {
-            Screen.fullScreen = false;
-        }
+        //Necessario per far vedere la tastiera sui dispositivi con touchscreen
+#if UNITY_WEBGL
+        Screen.fullScreen = false;
+#endif
     }
 }
