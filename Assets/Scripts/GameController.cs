@@ -11,9 +11,11 @@ public class GameController : MonoBehaviour
 {
     public GameObject passwordInput;
     public TMP_InputField passwordField;
+    public TMP_Text passwordText;
     public GameObject gameOverText;
     public GameObject winText;
     public string[] objWithPasswordTags;
+    public string[] objWithPasswordTexts;
 
     private Lives _lives;
     private readonly Regex _regex = new(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\p{P})[A-Za-z\d\p{P}]{8,}$");
@@ -26,10 +28,12 @@ public class GameController : MonoBehaviour
 
     public void ObjectPicked(string objTag)
     {
-        if (objWithPasswordTags.Contains(objTag))
+        int index = Array.IndexOf(objWithPasswordTags, objTag);
+        if (index >= 0)
         {
             passwordInput.SetActive(true);
             passwordField.text = "";
+            passwordText.text = objWithPasswordTexts[index];
             Time.timeScale = 0.0f;
         }
     }
