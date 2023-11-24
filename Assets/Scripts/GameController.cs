@@ -16,8 +16,11 @@ public class GameController : MonoBehaviour
     public GameObject gameOverText;
     public GameObject winText;
     public GameObject welcomeText;
+    public TMP_Text goalText;
     public string[] objWithPasswordTags;
     public string[] objWithPasswordTexts;
+    public string[] changeGoalTags;
+    public string[] changeGoalTexts;
 
     private Lives _lives;
     private readonly Regex _regex = new(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\p{P})[A-Za-z\d\p{P}]{8,}$");
@@ -38,6 +41,12 @@ public class GameController : MonoBehaviour
             passwordField.text = "";
             passwordText.text = objWithPasswordTexts[index];
             Time.timeScale = 0.0f;
+        }
+
+        int indexGoal = Array.IndexOf(changeGoalTags, objTag);
+        if (indexGoal >= 0)
+        {
+            goalText.text = changeGoalTexts[indexGoal];
         }
     }
 
