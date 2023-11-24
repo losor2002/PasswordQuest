@@ -52,7 +52,19 @@ public class GameController : MonoBehaviour
 
     public void CheckPassword()
     {
-        if (_regex.IsMatch(passwordField.text) && !_passwords.Contains(passwordField.text))
+        bool regexMatch = _regex.IsMatch(passwordField.text);
+        bool duplicated = _passwords.Contains(passwordField.text);
+
+        if (!regexMatch)
+        {
+            passwordText.text = "Sbagliato! La password inserita non è sicura, riprova";
+        }
+        else if (duplicated)
+        {
+            passwordText.text = "Sbagliato! La password è già stata usata in precedenza, riprova";
+        }
+        
+        if (regexMatch && !duplicated)
         {
             passwordInput.SetActive(false);
             _passwords.Add(passwordField.text);
