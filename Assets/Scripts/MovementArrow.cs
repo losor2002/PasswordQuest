@@ -12,7 +12,7 @@ public class MovementArrow : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     private void Start()
     {
-        if (Application.platform == RuntimePlatform.WebGLPlayer && !Application.isMobilePlatform)
+        if (!Input.touchSupported)
         {
             gameObject.SetActive(false);
         }

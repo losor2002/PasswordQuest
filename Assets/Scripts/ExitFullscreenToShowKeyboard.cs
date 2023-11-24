@@ -12,7 +12,7 @@ public class ExitFullscreenToShowKeyboard : MonoBehaviour, IPointerDownHandler, 
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (Application.platform == RuntimePlatform.WebGLPlayer && Application.isMobilePlatform)
+        if (Input.touchSupported)
         {
             Screen.fullScreen = false;
         }
