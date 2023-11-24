@@ -6,11 +6,12 @@ using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
     public GameObject passwordInput;
-    public TMP_InputField passwordField;
+    public InputField passwordField;
     public TMP_Text passwordText;
     public GameObject gameOverText;
     public GameObject winText;
