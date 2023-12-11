@@ -1,6 +1,10 @@
 # Password Quest
 
 <p align = "center">
+  <img src = "autenticazione.png" width="300" alt="Logo">
+</p>
+
+<p align = "center">
   Unity Project for privacy literacy
   <br>
   internship project for
